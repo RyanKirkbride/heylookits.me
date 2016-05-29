@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<head>
+
+<link href='styles/shCore.css' rel='stylesheet' type='text/css' />
+<link href='styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<script type='text/javascript' src='scripts/shAutoloader.js'></script>
+<script type='text/javascript' src='scripts/shCore.js'></script>
+<script type='text/javascript' src='scripts/shBrushJava.js'></script>
+
+<script type='text/javascript'> SyntaxHighlighter.all(); </script>
+
+<pre class='brush: java;'>
+import java.util.ArrayList;
+
+
+public class CompositorCol  extends Component implements List {
+	
+	int numItem;
+	ArrayList<Object> list = new ArrayList<Object>();
+	
+	public int count(){return numItem;}
+	
+	public Object getAt(int index){return list.get(index);}
+	
+	public Object first(){return list.get(0);}
+	
+	public Object last() { return list.get(list.size());}
+	
+	public boolean include(Object x)
+	{
+		for(int i = 0; i < list.size(); i++)
+		{
+			if(x.equals(list.get(i)))
+			{
+				return true;
+			}
+		}
+		
+		return false;
+		
+	}
+	
+	public void append(Object x)
+	{ 
+		numItem++;
+		list.add(x);
+	}
+	
+	public void prepend(Object x)
+	{ 
+		list.add(0, x);
+		numItem++;
+	}
+	
+	public void delete(Object x)
+	{
+		if(list.remove(x))
+		{
+			numItem--;
+		}
+	}
+	
+	public void deleteFirst()
+	{ 
+		if(list.remove(list.get(0)))
+		{
+			numItem--;
+		}		
+	}
+	
+	public void deleteAll()
+	{ 
+		list.clear(); 
+		numItem = 0;
+	}
+	
+	public void replace(int index, Object x)
+	{ 
+		list.add(index, x);
+		list.remove(index + 1);	
+	}
+
+
+	@Override
+	public boolean isLeaf() {
+		return false;
+	}
+
+	
+	@Override
+	public boolean isDecorated() {
+		return false;
+	}
+
+	@Override
+	public Iterator createIterator() {
+		return new ListIterator(this);
+	}
+
+
+	@Override
+	public Object acceptVisitor(Visitor v) {
+		return v.visitCol(this);
+	}
+
+}
+</pre>
+
+</body>
