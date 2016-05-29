@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<head>
+
+<link href='styles/shCore.css' rel='stylesheet' type='text/css' />
+<link href='styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<script type='text/javascript' src='scripts/shAutoloader.js'></script>
+<script type='text/javascript' src='scripts/shCore.js'></script>
+<script type='text/javascript' src='scripts/shBrushJava.js'></script>
+
+<script type='text/javascript'> SyntaxHighlighter.all(); </script>
+
+<pre class='brush: java;'>
+  public class Leaf extends Component {
+	
+	
+	AbsFlyweight data;
+	
+	public Leaf(Flyweight leaf)
+	{
+		data = leaf;
+	}
+	
+	public boolean isLeaf()
+	{
+		return true;
+	}
+	
+	public boolean isDecorated()
+	{
+		return false;
+	}
+	
+
+	public AbsFlyweight getData()
+	{
+		return data;
+	}
+	
+	public Iterator createIterator()
+	{
+		return new NullIterator();
+	}
+
+	@Override
+	public Object acceptVisitor(Visitor v) {
+		
+		return v.visitLeaf(this);
+	}
+	
+}
+</pre>
+
+</body>
