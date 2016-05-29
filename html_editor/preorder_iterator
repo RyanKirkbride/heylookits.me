@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<head>
+
+<link href='styles/shCore.css' rel='stylesheet' type='text/css' />
+<link href='styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<script type='text/javascript' src='scripts/shAutoloader.js'></script>
+<script type='text/javascript' src='scripts/shCore.js'></script>
+<script type='text/javascript' src='scripts/shBrushJava.js'></script>
+
+<script type='text/javascript'> SyntaxHighlighter.all(); </script>
+
+<pre class='brush: java;'>
+import java.util.Stack;
+
+
+public class PreorderIterator implements Iterator {
+
+	Component root;
+	Component currentItem;
+	Stack<Iterator> iteratorStack;
+	
+	public PreorderIterator(Component r)
+	{
+		root = r;
+		currentItem = root;
+		iteratorStack = new Stack<Iterator>();
+	}
+	
+	@Override
+	public void first() {
+		// TODO Auto-generated method stub
+		Iterator i = root.createIterator();
+		
+		if(i != null)		
+		{	
+			iteratorStack.removeAllElements();
+			iteratorStack.push(i);
+			currentItem = iteratorStack.peek().currentItem();
+		}
+		
+	}
+
+	@Override
+	public void next() {
+		Iterator i = iteratorStack.peek().currentItem().createIterator();
+		i.first();
+		iteratorStack.push(i);
+		
+		while(iteratorStack.size() > 0 && iteratorStack.peek().isDone())
+		{			
+			iteratorStack.pop();
+			if(!iteratorStack.isEmpty()) iteratorStack.peek().next();
+		}		
+	}
+
+	@Override
+	public boolean isDone() {
+		return iteratorStack.size() < 1;
+	}
+
+	@Override
+	public Component currentItem() {
+		
+		if(iteratorStack.size() > 0)
+		{
+			currentItem = iteratorStack.peek().currentItem();
+		}
+		else
+		{
+			currentItem = null;
+		}
+		
+		return currentItem;
+	}
+
+}  
+</pre>
+
+</body>
+
+
+
