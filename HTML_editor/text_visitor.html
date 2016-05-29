@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<head>
+
+<link href='styles/shCore.css' rel='stylesheet' type='text/css' />
+<link href='styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<script type='text/javascript' src='scripts/shAutoloader.js'></script>
+<script type='text/javascript' src='scripts/shCore.js'></script>
+<script type='text/javascript' src='scripts/shBrushJava.js'></script>
+
+<script type='text/javascript'> SyntaxHighlighter.all(); </script>
+
+<pre class='brush: java;'>
+  
+public class TextVisitor implements Visitor {
+
+	@Override
+	public Object visitCol(CompositorCol c) {
+		
+		String[] text = new String[c.count()];
+		PreorderIterator iter = new PreorderIterator(c);
+		
+		boolean row = false;
+		int index = 0;
+		text[0] = new String();
+		for(iter.first();!iter.isDone(); iter.next())
+		{
+	
+			if(iter.currentItem().isLeaf())
+			{
+				text[index] += "" +  iter.currentItem().acceptVisitor(this);
+				row = true;
+			}
+			else if(row)
+			{
+				text[index] += "\n";
+				index++;
+				text[index] = new String();
+				row = false;
+			}
+		}
+				
+		return text;
+	}
+
+	@Override
+	public Object visitRow(CompositorRow r) {
+		
+		String row = new String();
+		
+		for(int i = 0; i < r.count(); i++)
+		{
+			row += "" + ((Component) r.getAt(i)).acceptVisitor(this);			
+		}
+		
+		row += "\n";
+		
+		return row;
+	}
+
+	@Override
+	public Object visitLeaf(Component l) {
+		
+		while(l.isDecorated())
+		{
+			l = ((Decorator) l).getComponent();
+		}
+		
+		return ((Leaf) l).getData().operation();
+	}
+
+
+	
+}
+  
+  
+</pre>
+
+</body>
