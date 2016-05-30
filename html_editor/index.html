@@ -28,24 +28,38 @@
     <h2>Flyweight Classes</h2>
     
     <a href='flyweight.html'>Character Flyweight</a>
+    <p>This is a class implementing the flyweight design pattern to store a character value. Each character in a text document is stored as a flyweight object, of which there can be only one per character. This technique reduces the amount of space used to store the document.</p>
+    
     <a href='flyweight_factory.html'>Flyweight Factory</a>
+    <p>The flyweight factory is a class which generates flyweight objects. It is fed characters and returns the respective flyweight object or creates a new one if one does not yet exist. </p>
     
     <h2>Composite Structure Classes</h2>
-    
+    <p>To keep the text in a file in order a composite tree structure was implemented</p>
+  
     <a href='column.html'>Column</a>
+    <p>The compositorCol class acts as the root of the tree, and imitates the first column of the text document.</p>
+    
     <a href='row.html'>Row</a>
+    <p>The compositorRow class stores a list of leaf objects; one for each character in a row.</p>
+    
     <a href ='leaf.html'>Leaf</a>
+    <p>Leaf objects act as the leafs of the tree and store flyweight characters. </p>
     
     <h2>Iterator Classes</h2>
     
     <a href='preorder_iterator.html'>Preorder Iterator</a>
+    <p>This class iterates through the tree in a preorder structure.</p>
+    
     <a href='list_iterator.html'>List Iterator</a>
+    <p>This class iterates through the row and column nodes in the composite tree as if they were lists.</p>
     
     <h2>Visitor Classes</h2>
     
     <a href='text_visitor.html'>Text Visitor</a>
-    <a href='html_visitor.html'>HTML Visitor</a>
+    <p>This visitor class iterates through the tree and ignores any added html tags to a document. It can be used to display the original document without added HTML.</p>
     
+    <a href='html_visitor.html'>HTML Visitor</a>
+    <p>The HTML visitor will iterate through the tree without ignoring the tags added by the editor. With both of these classes it is ease to switch between viewing the original and edited document.</p>
     </div>
     
   </body>
