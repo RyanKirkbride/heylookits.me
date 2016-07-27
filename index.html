@@ -1,58 +1,256 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Heylookits.me : ">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous"></script>
+  	<script src="js/bootstrap.min.js" ></script>
 
-    <title>Hey Look</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <meta name="viewport" content="width=device-width">
 
   </head>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-          
-        <header class="inner">
-      
-          <h1 id="project_title">Ryan's Webpage</h1>
-          <h2 id="project_tagline"></h2>
-        </header>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">My Portfolio  <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></a>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Java Projects</h3>
-          <a href="/poker_squares" title = "Check out my poker squares player" >Poker Squares Player</a><br>
-          <a href="/html_editor" title = "Select Classes from my HTML Editor" >HTML Editor</a>
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>C Projects</h3>
-          <a href="/hdd_sim">HDD Simulator</a>
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Me</h3>
-         <a href="/experience">Work Experience</a><br>
-         <a href="/hobby">Hobbies</a>
-         
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#projects">Featured Work<span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skills <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#java">Java</a></li>
+            <li><a href="#c">C/C++</a></li>
+            <li><a href="#html">HTML/CSS</a></li>
+            <li><a href="#jscript">Javascript</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#doc">Documentation</a></li>
+            <li><a href="#ood">Object Oriented Design</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#leader">Leadership</a></li>
+            <li><a href="#attitude">Positive Attitude</a></li>
+          </ul>
+        </li>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav>
 
-</section>
+
+<body class="nav-link">
+<div class="container">
+  <section>
+    <div class="row">
+      <div class="col-md-6"><img class="img-responsive" src="http://placehold.it/100x100"></div>
+      <div class="col-md-6 text-right">
+        <h1 class="text-uppercase">Ryan Kirkbride</h1>
+        <h3>Computer Science Grad</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+      <img class="img-responsive" src="http://placehold.it/1140x350">
+    </div>
+    </div>
+  </section>
+
+  <section id="projects" class="nav-link">
+      <div class="row">
+        <div class="col-md-4">
+            <h2>Featured Work</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#" data-toggle="modal" data-target="#proj1"><img class="img-responsive" src="http://placehold.it/555x300"></a>
+              <h3>Appify</h3>
+              <p><a href="http://github.com">Link to project</a></p>
+          </div>
+          <div class="col-md-6">
+            <a href="#" data-toggle="modal" data-target="#proj2"><img class="img-responsive" src="http://placehold.it/555x300"></a>
+            <h3>Appify</h3>
+            <p><a href="http://github.com">Link to project</a></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#" data-toggle="modal" data-target="#proj3"><img class="img-responsive" src="http://placehold.it/555x300"></a>
+            <h3>Appify</h3>
+            <p><a href="http://github.com">Link to project</a></p>
+          </div>
+          <div class="col-md-6">
+            <a href="#" data-toggle="modal" data-target="#proj4"><img class="img-responsive" src="http://placehold.it/555x300"></a>
+            <h3>Appify</h3>
+            <p><a href="http://github.com">Link to project</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="row">
+          <div class="col-md-4 link-header">
+            <h2>Skills</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 nav-link link-header" id="java">
+            <h3>Java</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+
+          </div>
+          <div class="col-md-4 nav-link link-header" id="c">
+            <h3>C/C++</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+          <div class="col-md-4 nav-link link-header" id="html">
+            <h3>HTML/CSS</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 nav-link link-header" id="jscript">
+            <h3>Javascript</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+          <div class="col-md-4 nav-link link-header" id="doc">
+            <h3>Documentation</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+          <div class="col-md-4 nav-link link-header" id="ood">
+            <h3>Object Oriented Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+        </div><div class="row">
+          <div class="col-md-4 nav-link link-header" id="leader">
+            <h3>Leadership</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+          <div class="col-md-4 nav-link link-header" id="attitude">
+            <h3>Positive Attitude</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla justo, consectetur eget odio id, condimentum dapibus massa. Aliquam eget volutpat neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ultrices volutpat odio commodo efficitur. Nunc pharetra sem eget magna vestibulum, et mattis nisi ullamcorper. Donec posuere imperdiet blandit. Aliquam posuere nisi eget sodales lobortis. Aliquam commodo non dui id sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean mollis magna eu velit vestibulum, vitae luctus diam ultrices. Etiam tristique lacinia sapien vitae posuere. In luctus ultrices nisi, id gravida mi pretium sed. Cras venenatis non ipsum eget pretium. Morbi ornare rhoncus orci, et scelerisque elit placerat in. Fusce tristique justo vel purus sagittis molestie.
+            </p>
+            <p>
+Nulla tristique sem nulla, sed interdum tellus ornare eu. Nullam elementum feugiat placerat. Nunc orci augue, lobortis pellentesque mattis ac, aliquet ut leo. Morbi condimentum nec odio ut consequat. Nunc felis turpis, sollicitudin quis metus ut, consequat rhoncus magna. Cras viverra eleifend est, sit amet pellentesque magna elementum quis. Donec elit dolor, scelerisque at lectus sit amet, blandit semper metus. In vel justo sit amet ligula dapibus placerat. Pellentesque porta placerat arcu vitae eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut ipsum aliquet, aliquet ligula eu, dignissim lacus. Integer eget ante dui. Vivamus hendrerit vitae massa sed porta. Aenean aliquam, augue vitae scelerisque scelerisque, odio mauris hendrerit ex, maximus molestie leo nisl nec erat. Vivamus ornare tempor ultricies. In volutpat tortor ut libero ultricies ultricies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="proj1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+            </div>
+            <div class="modal-body">
+                <img class="img-responsive" src="images/555.jpeg">
+                This was my first project in this class. I learned a lot about HTML and CSS.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="proj2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/555.jpeg">
+                    This was my first project in this class. I learned a lot about HTML and CSS.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Heylookits.me maintained by <a href="https://github.com/RyanKirkbride">RyanKirkbride</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div class="modal fade" id="proj3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/555.jpeg">
+                    This was my first project in this class. I learned a lot about HTML and CSS.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    
+    <div class="modal fade" id="proj4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src="images/555.jpeg">
+                    This was my first project in this class. I learned a lot about HTML and CSS.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
   </body>
 </html>
