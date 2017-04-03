@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24" alt=""/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Upcoming Movies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="cuA-xqBw4jE" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//h2mhfbEBGABSHo2vXG1ECMKAJa7.jpg" width="220" height="342" alt="movie poster">
+    <h2>Life</h2>
+    <p>The six-member crew of the International Space Station is tasked with studying a sample from Mars that may be the first proof of extra-terrestrial life, which proves more intelligent than ever expected.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="G4VmJcZR0Yg" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//myRzRzCxdfUWjkJWgpHHZ1oGkJd.jpg" width="220" height="342" alt="movie poster">
+    <h2>Ghost in the Shell</h2>
+    <p>In the near future, Major is the first of her kind: a human saved from a terrible crash, who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous criminals.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="k397HRbTtWI" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//67NXPYvK92oQgEQvLppF2Siol9q.jpg" width="220" height="342" alt="movie poster">
+    <h2>The Boss Baby</h2>
+    <p>A story about how a new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5kIe6UZHSXw" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//iRAZIEgfB9N0BObV0QI61Nxh92h.jpg" width="220" height="342" alt="movie poster">
+    <h2>Power Rangers</h2>
+    <p>Saban's Power Rangers follows five ordinary teens who must become something extraordinary when they learn that their small town of Angel Grove — and the world — is on the verge of being obliterated by an alien threat. Chosen by destiny, our heroes quickly discover they are the only ones who can save the planet. But to do so, they will have to overcome their real-life issues and before it’s too late, band together as the Power Rangers.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5wfrDhgUMGI" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//6cbIDZLfwUTmttXTmNi8Mp3Rnmg.jpg" width="220" height="342" alt="movie poster">
+    <h2>Hidden Figures</h2>
+    <p>The untold story of Katherine G. Johnson, Dorothy Vaughan and Mary Jackson – brilliant African-American women working at NASA and serving as the brains behind one of the greatest operations in history – the launch of astronaut John Glenn into orbit. The visionary trio crossed all gender and race lines to inspire generations to dream big.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KJXqh2rDehg" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//cDbEiJIRwFcx2GsClJ1hDUY5Vwj.jpg" width="220" height="342" alt="movie poster">
+    <h2>Patriots Day</h2>
+    <p>An account of Boston Police Commissioner Ed Davis's actions in the events leading up to the 2013 Boston Marathon bombing and the aftermath, which includes the city-wide manhunt to find the terrorists behind it.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XGk2EfbD_Ps" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//1jvyy3UtMbWBHikj7byFJeY5Fc7.jpg" width="220" height="342" alt="movie poster">
+    <h2>John Wick: Chapter 2</h2>
+    <p>John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="9NJj12tJzqc" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//qAwFbszz0kRyTuXmMeKQZCX3Q2O.jpg" width="220" height="342" alt="movie poster">
+    <h2>Moonlight</h2>
+    <p>The tender, heartbreaking story of a young man’s struggle to find himself, told across three defining chapters in his life as he experiences the ecstasy, pain, and beauty of falling in love, while grappling with his own sexuality.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="8LdpyRBE0aA" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//x2pF5coOKTkj2J9SUnxg6wZktSw.jpg" width="220" height="342" alt="movie poster">
+    <h2>Smurfs: The Lost Village</h2>
+    <p>In this fully animated, all-new take on the Smurfs, a mysterious map sets Smurfette and her friends Brainy, Clumsy and Hefty on an exciting race through the Forbidden Forest leading to the discovery of the biggest secret in Smurf history.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="xU47nhruN-Q" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//xq1Ugd62d23K2knRUx6xxuALTZB.jpg" width="220" height="342" alt="movie poster">
+    <h2>Your Name.</h2>
+    <p>High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="EB6Gecy6IP8" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//gxK80WUwkQePpXpzRdpob0i7DD5.jpg" width="220" height="342" alt="movie poster">
+    <h2>The Edge of Seventeen</h2>
+    <p>Two high school girls are best friends until one dates the other's older brother, who is totally his sister's nemesis.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="OAt0mmfW8S4" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//muwaDIv5cLv2Z07CZFWOsL7lYuO.jpg" width="220" height="342" alt="movie poster">
+    <h2>Tomorrow Everything Starts</h2>
+    <p>A man without attachments or responsibilities suddenly finds himself with an abandoned baby and leaves for London to try and find the mother. Eight years later after he and his daughter become inseparable Gloria's mother reappears.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="NErwOWW7aCE" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//oyPcsfGWL5Se6RGW1JCVgpHlASH.jpg" width="220" height="342" alt="movie poster">
+    <h2>CHiPS</h2>
+    <p>The adventures of two California Highway Patrol motorcycle officers as they make their rounds on the freeways of Los Angeles.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="JF1rLFCdewU" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//byeTgTgG7M1RN2c7njWWIkSkNig.jpg" width="220" height="342" alt="movie poster">
+    <h2>A Cure for Wellness</h2>
+    <p>An ambitious young executive is sent to retrieve his company's CEO from an idyllic but mysterious "wellness center" at a remote location in the Swiss Alps but soon suspects that the spa's miraculous treatments are not what they seem.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="9GvX2uexGkA" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//iNpz2DgTsTMPaDRZq2tnbqjL2vF.jpg" width="220" height="342" alt="movie poster">
+    <h2>The Fate of the Furious</h2>
+    <p>When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="UlahbaaJqog" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//nTGbq37hYLuNy7YgMg0gVLma0NS.jpg" width="220" height="342" alt="movie poster">
+    <h2>Below Her Mouth</h2>
+    <p>An unexpected affair quickly escalates into a heart-stopping reality for two women whose passionate connection changes their lives forever.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="eiEfrA6MWs4" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//cCQKccGZsfRSBHy4xEhDlS73OS2.jpg" width="220" height="342" alt="movie poster">
+    <h2>The Zookeeper's Wife</h2>
+    <p>The Zookeeper's Wife tells the account of keepers of the Warsaw Zoo, Jan and Antonina Zabinski, who helped save hundreds of people and animals during the Nazi invasion.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wwjtdOqTmrA" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//ik3ebv7J18fs6cHkmu91oxz7EGt.jpg" width="220" height="342" alt="movie poster">
+    <h2>The Lost City of Z</h2>
+    <p>A true-life drama, centering on British explorer Col. Percival Fawcett, who disappeared while searching for a mysterious city in the Amazon in the 1920s.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="duGqrYw4usE" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//gaHepzSTMkGwsSKAqiBgroSCf07.jpg" width="220" height="342" alt="movie poster">
+    <h2>Guardians of the Galaxy Vol. 2</h2>
+    <p>The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.</p>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zQ6ny-fROX8" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2//lCjCMP4IYdSphkaQ19oqMKBKics.jpg" width="220" height="342" alt="movie poster">
+    <h2>Bleed for This</h2>
+    <p>The inspirational story of World Champion Boxer Vinny Pazienza, who after a near fatal car crash, which left him not knowing if he'd ever walk again, made one of sports most incredible comebacks.</p>
+</div>
+
+    </div>
+  </body>
+</html>
